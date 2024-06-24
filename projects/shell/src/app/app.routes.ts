@@ -3,6 +3,11 @@ import { loadRemoteModule } from "@angular-architects/native-federation";
 
 export const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'shell/dummy',
+    pathMatch: 'full'
+  },
+  {
     path: 'shell/:param',
     children: [
       {
