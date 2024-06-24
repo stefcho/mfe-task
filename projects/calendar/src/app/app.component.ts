@@ -15,7 +15,6 @@ export class AppComponent implements OnDestroy {
 
   /**
    * Destroy subject for route subscription
-   * @type {Subject<void>} destroy$
    */
   private readonly destroy$: Subject<void> = new Subject<void>();
 
