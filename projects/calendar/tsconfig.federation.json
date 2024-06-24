@@ -8,6 +8,8 @@
     "src/main.ts"
   ],
   "include": [
-    "src/**/*.d.ts"
+    "src/**/*.d.ts",
+    "../design-components/src/public-api.ts",
+    "../shared-services/src/public-api.ts"
   ]
 }
