@@ -1,0 +1,14 @@
+<app-navigation></app-navigation>
+
+<app-header-menu></app-header-menu>
+
+<div class="app-container">
+  <router-outlet />
+  <div class="w-50 pr-1">
+    <router-outlet name="mailboxOutlet" />
+  </div>
+  <div class="w-50 pl-1">
+    <router-outlet name="calendarOutlet" />
+  </div>
+</div>
+

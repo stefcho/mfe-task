@@ -1,0 +1,13 @@
+<nav>
+  <button [routerLink]="['/shell', urlParam]" [routerLinkActive]="'active'">Shell app</button>
+  <button [routerLink]="['/mailbox', urlParam]" [routerLinkActive]="'active'">Mailbox app</button>
+  <button [routerLink]="['/calendar', urlParam]" [routerLinkActive]="'active'">Calendar app</button>
+</nav>
+
+<div class="url-param-config">
+  <h2>Config section</h2>
+  <label for="urlParam">Use input to define the URL parameter and then the navigation buttons in the top bar to navigate to new url</label>
+  <input type="text" [(ngModel)]="urlParam" name="urlParam">
+</div>
+
+<div class="separator"></div>
