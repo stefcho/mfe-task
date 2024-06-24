@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npm-run-all --parallel start-shell start-mailbox start-calendar",
     "start-shell": "ng serve shell",
     "start-mailbox": "ng serve mailbox",
     "start-calendar": "ng serve calendar",
