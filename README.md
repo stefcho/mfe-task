@@ -1,6 +1,12 @@
-# MfeTask
+# Module Federation task
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.5.
+
+## Install instructions
+1. Checkout repo
+2. Ensure you have Node.JS 18.13.0 or higher installed
+3. Run npm install
+4. Start project with `npm start`
 
 ## Development server
 
@@ -10,18 +16,16 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The appl
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Libraries used
+- Angular latest version
+- Native federation latest version
+- RxJS
+- Karma + Jasmine
+- npm-run-all - to run all apps dev servers concurrently
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Brief explanation
+Demo includes 3 standalone apps: Shell app, Mailbox App and Calendar App. Mailbox and Calendar apps exist on their own route, as well inside the shell app where they are displayed side by side in separate router outlets.
 
-## Running unit tests
+The apps accept a url parameter after their route and display the string inside their containers. So http://localhost:4200/shell/dummy will display both apps side by side and they will display `dummy`. This url param can be set with the input in the config section of the app. Any further navigation will update the data in the apps. Or you can simply edit the url in the browser which will also rerender the apps.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+The next section is a header section, where the app will randomly display random amounts of header buttons. It simulates an API response with a schema of what items need to be displayed in the header menu. The components are part of the shared lib called design-components and the logic is handled by the shared service. All 3 apps have access to the lib and service. Inside the mailbox app there is also a button that will randomize the header buttons components list as well.
